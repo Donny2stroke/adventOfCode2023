@@ -11,7 +11,14 @@ function caricaFile($nomeFile){
 }
 caricaFile("input.txt");
 
+$matrice = array();
 foreach($righeFile as $key=>$riga){
     echo $riga.PHP_EOL;
+    $valori = str_split($riga);
+    foreach($valori as $valore){
+        $matrice[$key][]=$valore;
+    } 
 }
+
+//print_r($matrice);
 ?>
